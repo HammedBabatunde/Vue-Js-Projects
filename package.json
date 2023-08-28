@@ -1,0 +1,13 @@
+{
+  "name": "teamable",
+  "version": "1.0.0",
+  "dependencies": {
+      "@vue/cli-service": "5.0.8",
+      "@vue/compiler-sfc": "^3.3.4",
+      "core-js": "3.6.5",
+      "vue": "3.2.40"
+  },
+  "scripts": {
+      "serve": "vue-cli-service serve"
+  }
+}
