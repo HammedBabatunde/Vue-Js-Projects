@@ -49,7 +49,7 @@ app.post('/update-profile', async function(req, res) {
 
 
     if (isEmptyPayload(payload) || isInValidEmail(payload)) {
-        res.status(400).send({error: "invalid payload. Couldnt update user profile"})
+        res.status(400).send({error: " "})
     } else {
 
         // connect to mongodb database
@@ -70,6 +70,11 @@ app.post('/update-profile', async function(req, res) {
     }
 })
 
-app.listen(3000, function() {
+const server = app.listen(3000, function() {
     console.log("app listening on port 3000")
 })
+
+module.exports = {
+    app,
+    server
+}
