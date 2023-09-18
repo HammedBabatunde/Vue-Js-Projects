@@ -4,8 +4,12 @@ const bodyParser = require('body-parser')
 const { MongoClient } = require('mongodb')
 const  { isEmptyPayload, isInValidEmail } = require('./validator')
 
+const { DB_USER, DB_PASS, DEV } = process.env
+
 //connect to mongodb database
-const url = 'mongodb://localhost:27017';
+const dbAddress = '127.0.0.1:27017'
+const url = DEV ? `mongodb://${dbAddress}` : `mongodb://${DB_USER}:${DB_PASS}@${dbAddress}?authSource=company_db`
+
 const client = new MongoClient(url);
 
 // Create database
