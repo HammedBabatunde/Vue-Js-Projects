@@ -11,21 +11,14 @@ const { DB_USER, DB_PASS, DEV } = process.env
 //connect to mongodb database
 const dbAddress = '127.0.0.1:27017'
 // const url = DEV ? `mongodb://${dbAddress}` : `mongodb://${DB_USER}:${DB_PASS}@${dbAddress}?authSource=company_db`
-// const url = DEV ? `mongodb+srv://${DB_USER}:${DB_PASS}@employee-profile.rtddh3z.mongodb.net/?retryWrites=true&w=majority&appName=employee-profile"`
-const uri = "mongodb+srv://tunde:oluwadamilola@employee-data.glzjtf8.mongodb.net/?retryWrites=true&w=majority&appName=employee-data";
+
+const uri = `mongodb+srv://tunde:oluwadamilola@employee-data.glzjtf8.mongodb.net/?retryWrites=true&w=majority&appName=employee-data`;
 
 // const client = new MongoClient(url);
 
 
 // Create a MongoClient with a MongoClientOptions object to set the Stable API version
-const client = new MongoClient(uri, {
-    serverApi: {
-      version: ServerApiVersion.v1,
-      strict: true,
-      deprecationErrors: true,
-    }
-});  
-
+const client = new MongoClient(uri, { serverApi: ServerApiVersion.v1 });
 
 
 // Create database
