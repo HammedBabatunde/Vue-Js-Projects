@@ -28,7 +28,7 @@ test('test request with invalid payload', async function() {
     console.log(response.body)
     expect(response.statusCode).toBe(400)
     expect(response.body).toHaveProperty("error")
-    expect(response.body.error).toBe("invalid payload. Couldnt update user profile")
+    expect(response.body.error).toBe("invalid payload. Couldn't update user profile")
 
     server.close()
 })
