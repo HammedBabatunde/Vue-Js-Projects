@@ -83,8 +83,8 @@ app.post('/update-profile', async function(req, res) {
     }
 })
 
-const server = app.listen(3000, function() {
-    console.log("app listening on port 3000")
+const server = app.listen(process.env.SERVER_PORT, function() {
+    console.log(`app listening on port ${process.env.SERVER_PORT}`)
 })
 
 module.exports = {
