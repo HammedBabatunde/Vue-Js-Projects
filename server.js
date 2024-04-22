@@ -9,10 +9,10 @@ const  { isEmptyPayload, isInValidEmail } = require('./validator')
 const { DB_USER, DB_PASS, DEV } = process.env
 
 //connect to mongodb database
-const dbAddress = '127.0.0.1:27017'
+// const dbAddress = '127.0.0.1:27017'
 // const url = DEV ? `mongodb://${dbAddress}` : `mongodb://${DB_USER}:${DB_PASS}@${dbAddress}?authSource=company_db`
 
-const uri = `mongodb+srv://tunde:oluwadamilola@employee-data.glzjtf8.mongodb.net/?retryWrites=true&w=majority&appName=employee-data`;
+const uri = process.env.MONGODB_URI
 
 // const client = new MongoClient(url);
 
