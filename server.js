@@ -6,7 +6,7 @@ const  { isEmptyPayload, isInValidEmail } = require('./validator')
 // require('dotenv').config();
 
 
-const { DB_USER, DB_PASS, DEV } = process.env
+// const { DB_USER, DB_PASS, DEV } = process.env
 
 //connect to mongodb database
 // const dbAddress = '127.0.0.1:27017'
